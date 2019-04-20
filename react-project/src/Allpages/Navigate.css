@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar {
+    height: 65px;
+    font-size: 40px;
+}
+
+.typo {
+    display: flex;
+    direction: rtl;
+}
+
+Button span:nth-child(1) {
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+    font-family: 'Margarine';
+}
+
+.dialog {
+
+    /* background-image: */
+    text-align: center;
+}
+
+.typography {
+    font-size: 40px;
+    font-family: 'Margarine';
+    font-weight: bolder;
+    color: blue;
+}
+
+.policy {
+    text-align: center;
+    font-size: 8px;
+    padding: 0 10px 10px 10px;
+}

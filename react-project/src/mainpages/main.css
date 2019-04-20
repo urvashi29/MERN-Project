@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar {
+    height: 65px;
+    font-size: 40px;
+}
+
+.typo {
+    display: flex;
+    direction: rtl;
+}
+
+.dashboard-button {
+    padding: 0 10px 0 10px;
+}
+
+.textfield {
+    width: 120px;
+}

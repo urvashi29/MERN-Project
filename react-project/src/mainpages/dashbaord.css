@@ -1,0 +1,163 @@
+.main-dashboard div:nth-child(1) {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    background: red;
+    animation-name: marque-top;
+    animation-duration: 2s;
+    -webkit-animation-name: marque-top;
+    -webkit-animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+
+.main-dashboard {
+    background-image: url("Chitkara.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-dashboard div:nth-child(1):hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+@keyframes marque-top {
+    from {
+        top: 0px;
+        left: 550px;
+        background: white;
+    }
+
+    to {
+        top: 80px;
+        left: 550px;
+        background: #000066;
+    }
+}
+
+.main-dashboard div:nth-child(2) {
+    animation-name: marque-left;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: marque-left;
+    -webkit-animation-duration: 2s;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    background: red;
+}
+
+.main-dashboard div:nth-child(2):hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+@keyframes marque-left {
+    from {
+        top: 100px;
+        left: 0px;
+        background: white;
+    }
+
+    to {
+        top: 100px;
+        left: 250px;
+        background: #666600
+    }
+}
+
+.main-dashboard div:nth-child(3) {
+    animation-name: marque-bottom;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: marque-bottom;
+    -webkit-animation-duration: 2s;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    background: red;
+}
+
+.main-dashboard div:nth-child(3):hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+@keyframes marque-bottom {
+    from {
+        bottom: 0;
+        left: 550px;
+        background: white;
+    }
+
+    to {
+        bottom: -80px;
+        left: 550px;
+        background: #e68a00;
+    }
+}
+
+
+.main-dashboard div:nth-child(4) {
+    animation-name: marque-right;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: marque-right;
+    -webkit-animation-duration: 2s;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    background: red;
+}
+
+.main-dashboard div:nth-child(4):hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+@keyframes marque-right {
+    from {
+        top: -320px;
+        left: 0px;
+        background: white;
+    }
+
+    to {
+        top: -320px;
+        left: 830px;
+        background: #602040;
+    }
+}
+
+div h1 {
+    text-align: center;
+    padding-top: 70px;
+    color: white;
+}
+
+div:nth-child(2) img {
+    height: 400px;
+    width: 500px;
+}
+
+div a h1 {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.typography {
+    font-size: 40px;
+    font-family: 'Margarine';
+    font-weight: bolder;
+    color: blue;
+}

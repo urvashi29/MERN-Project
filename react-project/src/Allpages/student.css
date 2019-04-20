@@ -1,0 +1,39 @@
+.student {
+    height: 400px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid #bbb;
+    margin: 150px auto auto auto;
+}
+
+.signup {
+    height: 100%;
+    width: 500px;
+    text-align: center;
+    border: 1px solid #bbb;
+    margin: 100px auto auto auto;
+}
+
+.typography {
+    font-size: 40px;
+    font-family: 'Margarine';
+    font-weight: bolder;
+    color: blue;
+}
+
+.policy {
+    text-align: center;
+    font-size: 15px;
+    padding: 0 10px 10px 10px;
+}
+
+
+.validate {
+    width: 350px;
+    /* height: 30px; */
+    padding-top: 10px;
+}
+
+/* .text-field {
+    width: 350px;
+} */
