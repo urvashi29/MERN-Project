@@ -19,6 +19,7 @@ export default class SignUp extends Component {
 
     onChange(e) {
         this.setState({
+            [e.target.type]: e.target.value,
             [e.target.name]: e.target.value
         })
     }
@@ -57,7 +58,6 @@ export default class SignUp extends Component {
                     className='validate'
                     label="Email"
                     variant="outlined"
-                    name="email"
                     required='true'
                     type='email'
                     onChange={this.onChange}
@@ -69,9 +69,8 @@ export default class SignUp extends Component {
                     className='validate'
                     label="Password"
                     variant="outlined"
-                    onChange={this.onChangePass}
-                    name="Password"
-                    type='password'
+                    type="password"
+                    onChange={this.onChange}
                     value={this.state.password}
                 />
                 <br />
@@ -81,7 +80,6 @@ export default class SignUp extends Component {
                     label="Department"
                     variant="outlined"
                     onChange={this.onChange}
-                    name="deaprtment"
                     required='true'
                     value={this.state.dept}
                 />
@@ -91,10 +89,10 @@ export default class SignUp extends Component {
                     className='validate'
                     label="Contact"
                     required='true'
-                    variant="outlined"
-                    onChange={this.onChange}
                     name="contact"
+                    variant="outlined"
                     value={this.state.contact}
+                    onChange={this.onChange}
                 />
                 <br />
                 <br />
