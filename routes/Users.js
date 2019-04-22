@@ -1,4 +1,5 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const users = express.Router()
 const cors = require('cors')
 const jwt = require('jsonwebtoken')
@@ -8,6 +9,14 @@ const validateRegisterInput = require('../validation/signup');
 const User = require('../models/User')
 users.use(cors())
 process.env.SECRET_KEY = 'secret'
+const dbRoute = "mongodb://mkm321:qAzW((sXeDc0@@ds137255.mlab.com:37255/mydb";
+mongoose.connect(
+    dbRoute, { useNewUrlParser: true }
+);
+
+let db = mongoose.connection;
+db.once("open", () => console.log("connected to the database"));
+db.on("error", console.error.bind(console, "MongoDB connection error:"))
 
 users.post('/signup', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -49,23 +58,29 @@ users.post('/signup', (req, res) => {
 
 users.post('/studentlogin', (req, res) => {
     User.findOne({
-        email: req.body.email
+        email: req.body.email,
+        password: req.body.password
     })
         .then(user => {
             if (user) {
-                if (bcrypt.compareSync(req.body.password, user.password)) {
-                    const payload = {
-                        _id: user._id,
-                        name: user.name,
-                        email: user.email
-                    }
-                    let token = jwt.sign(payload, process.env.SECRET_KEY, {
-                        expiresIn: 1440
-                    })
-                    res.send(token)
+                if (!user.email == email && !user.password == password) {
+                    res.json({ error: 'Invalid Id or Password' })
                 }
                 else {
-                    res.json({ error: 'User does not exist' })
+                    if (bcrypt.compareSync(req.body.password, user.password)) {
+                        const payload = {
+                            _id: user._id,
+                            name: user.name,
+                            email: user.email
+                        }
+                        let token = jwt.sign(payload, process.env.SECRET_KEY, {
+                            expiresIn: 1440
+                        })
+                        res.send(token)
+                    }
+                    else {
+                        res.json({ error: 'User does not exist' })
+                    }
                 }
             }
         })
